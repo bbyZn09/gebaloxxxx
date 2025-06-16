@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Site inovador</title>
+  <style>
+    body {
+      background-color: white;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: sans-serif;
+      padding: 20px;
+    }
+
+    #termo-texto {
+      max-width: 600px;
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    button {
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      border: 3px solid #333;
+      border-radius: 10px;
+      background-color: #eee;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #ccc;
+    }
+
+    #creditos {
+      margin-top: 15px;
+      font-size: 1rem;
+      color: #555;
+      font-style: italic;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="termo-texto">
+    Antes de aceitar, saiba que este termo contém cláusulas importantes que poucos lerão atentamente.
+    Ao clicar no botão, você concorda com tudo o que está escrito (mesmo que ninguém tenha lido).
+  </div>
+
+  <button id="botao">Aceito os termos</button>
+
+  <div id="creditos">Criado por bbyZn</div>
+
+  <script>
+    const botao = document.getElementById('botao');
+    const creditos = document.getElementById('creditos');
+
+    botao.addEventListener('click', () => {
+      botao.textContent = "Você vendeu sua alma 😈";
+      botao.style.backgroundColor = '#ff4444';
+      botao.style.color = 'white';
+      botao.style.borderColor = '#aa0000';
+      creditos.style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>
